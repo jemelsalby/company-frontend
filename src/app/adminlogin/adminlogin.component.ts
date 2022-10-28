@@ -18,7 +18,7 @@ readValue=()=>{
     "password":this.password
   }
   if (this.userName=="admin" && this.password=="12345") {
-    this.myRouter.navigate(["/emplogin"])
+    this.myRouter.navigate(["/adminhome"])
     
   } else {
     alert("invalid credential")
