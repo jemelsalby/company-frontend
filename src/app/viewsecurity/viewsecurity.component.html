@@ -1,0 +1,53 @@
+<app-admin-navbar></app-admin-navbar>
+<div>
+<section  style="background-color: #2a5053;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-12">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-3">
+              <div class="col-md-12 col-lg-12 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black" >
+                
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">id</th>
+                                <th scope="col">Security Code</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Join Date</th>
+                                <th scope="col">User Name</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">Delete</th>
+                                <!-- <th scope="col">Update</th> -->
+                             
+                            </tr>
+                        </thead>
+                        <tbody>
+          
+                            <tr *ngFor = "let i of viewData" >
+                                <td>{{i.id}}</td>
+                                <td>{{i.sCode}}</td>
+                                <td>{{i.sName}}</td>
+                                <td>{{i.sAdd}}</td>
+                                <td>{{i.sPhone}}</td>
+                                <td>{{i.sDate}}</td>
+                                <td>{{i.sUsername}}</td>
+                                <td>{{i.sPassword}}</td>
+                                <td><button class="btn btn-primary" (click)="deleteSec(i.sCode)">Delete</button></td>
+                                <!-- <td><button type="button" class="btn btn-primary" routerLink="/searchemp">UPDATE</button></td> -->
+                              
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

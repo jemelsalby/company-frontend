@@ -14,6 +14,9 @@ import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
 import { EmployeeviewComponent } from './employeeview/employeeview.component';
 import { SearchemployeeComponent } from './searchemployee/searchemployee.component';
+import { AddsecurityComponent } from './addsecurity/addsecurity.component';
+import { ViewsecurityComponent } from './viewsecurity/viewsecurity.component';
+import { SearchsecurityComponent } from './searchsecurity/searchsecurity.component';
 
 
 
@@ -38,7 +41,18 @@ path:"",component:AdminloginComponent
                       },
                       {
                         path:"searchemp",component:SearchemployeeComponent
-                          }
+                          },
+
+
+                          {
+                            path:"addsec",component:AddsecurityComponent
+                              },
+                              {
+                                path:"viewsec",component:ViewsecurityComponent
+                                  },
+                                  {
+                                    path:"searchsec",component:SearchsecurityComponent
+                                      }
 
 
 ]
@@ -55,6 +69,9 @@ path:"",component:AdminloginComponent
     AddemployeeComponent,
     EmployeeviewComponent,
     SearchemployeeComponent,
+    AddsecurityComponent,
+    ViewsecurityComponent,
+    SearchsecurityComponent,
     
     
   ],

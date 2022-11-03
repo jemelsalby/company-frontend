@@ -1,0 +1,57 @@
+<app-admin-navbar></app-admin-navbar>
+<div>
+<section  style="background-color: #2a5053;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-12">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-3">
+              <div class="col-md-12 col-lg-12 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black" >
+                    <div>
+                    <input type="text"  class="form-control form-control-lg"  name="sCode"[(ngModel)]="sCode" />
+                    <label class="form-label" for="form2Example17">Security Code</label>
+                  </div>
+                  <div class="pt-1 mb-4">
+                    <button class="btn btn-success " (click)="search()">Search</button>
+                  </div>
+
+
+                  <div *ngFor="let i of viewdata">
+                    <div>
+                      <input type="text"  class="form-control form-control-lg" value="{{i.sCode}}"[(ngModel)]="i.sCode" />
+                      <label class="form-label" for="form2Example17">Security Code</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="text"  class="form-control form-control-lg"value="{{i.sName}}"[(ngModel)]="i.sName" />
+                        <label class="form-label" for="form2Example17" >Security Name</label>
+                      </div>
+                      <div class="form-outline mb-4">
+                        <input type="text"  class="form-control form-control-lg" value="{{i.sAdd}}"[(ngModel)]="i.sAdd" />
+                        <label class="form-label" for="form2Example17" >Security Address</label>
+                      </div>
+                      <div class="form-outline mb-4">
+                        <input type="text"  class="form-control form-control-lg"value="{{i.sPhone}}"[(ngModel)]="i.sPhone" />
+                        <label class="form-label" for="form2Example17" >Phone Number</label>
+                      </div>
+                      <div class="form-outline mb-4">
+                        <input type="text"  class="form-control form-control-lg"value="{{i.sUsername}}"[(ngModel)]="i.sUsername" />
+                        <label class="form-label" for="form2Example17" >User Name</label>
+                      </div>
+                      <div class="form-outline mb-4">
+                        <input type="text"  class="form-control form-control-lg" value="{{i.sPassword}}"[(ngModel)]="i.sPassword"/>
+                        <label class="form-label" for="form2Example17" >Password</label>
+                      </div>
+                    <div class="pt-1 mb-4">
+                      <button class="btn btn-success" (click)="update()">UPDATE</button>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
