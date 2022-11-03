@@ -11,6 +11,10 @@ import { SecurityloginComponent } from './securitylogin/securitylogin.component'
 import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
+import { AddemployeeComponent } from './addemployee/addemployee.component';
+import { EmployeeviewComponent } from './employeeview/employeeview.component';
+import { SearchemployeeComponent } from './searchemployee/searchemployee.component';
+
 
 
 const routes:Routes=[
@@ -25,7 +29,18 @@ path:"",component:AdminloginComponent
           },
           {
             path:"adminhome",component:AdminComponent
-              }
+              },
+              {
+                path:"addemp",component:AddemployeeComponent
+                  },
+                  {
+                    path:"viewemp",component:EmployeeviewComponent
+                      },
+                      {
+                        path:"searchemp",component:SearchemployeeComponent
+                          }
+
+
 ]
 
 @NgModule({
@@ -37,7 +52,10 @@ path:"",component:AdminloginComponent
     SecurityloginComponent,
     AdminComponent,
     AdminNavbarComponent,
-   
+    AddemployeeComponent,
+    EmployeeviewComponent,
+    SearchemployeeComponent,
+    
     
   ],
   imports: [
